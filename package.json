@@ -7,8 +7,16 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "vue-axios": "^3.2.4",
+=======
+>>>>>>> 0e71f1d2f7482199fce04597341bb5102df51344
+=======
+>>>>>>> 0e71f1d2f7482199fce04597341bb5102df51344
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
@@ -17,7 +25,6 @@
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.32.0",
     "sass-loader": "^10.0.0",
-    "vue-cli-plugin-vuetify": "~2.4.0",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"
   }
