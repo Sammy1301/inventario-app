@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 #app{
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  width: 90vw;
 }
 </style>

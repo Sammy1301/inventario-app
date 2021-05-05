@@ -2,26 +2,52 @@
   <div class="login">
     <div class="login-body">
     <h1>Login</h1>
-    <div class="content">
-      <label for="userName">User Name</label><br>
-      <input type="text" name="user">
+    <form id="FrmLogin" autocomplete="off" @submit.prevent="login">
+        <div class="content">
+          <label for="user">User Name</label><br>
+          <input type="text" name="user" v-model="user">
+        </div>
+        <div class="content">
+          <label for="pass">Password</label><br>
+          <input type="password" name="pass" v-model="pass">
+        </div>
+        <br><br>
+        <hr>
+        <div class="buttons">
+          <input type="submit" />
+          <router-link to="/Registro">Registrarse</router-link>
+        </div>
+    </form>
       </div>
-      <div class="content">
-      <label for="userName">Password</label><br>
-      <input type="password" name="pass">
-      </div>
-      <br><br>
-      <hr>
-
-      <span><router-link to="/Home">Login</router-link></span>
-      <span><router-link to="/Registro">Registrarse</router-link></span>
-    </div>
   </div>
 </template>
 
 <script>
+import axios  from 'axios'
 export default {
-  name:'Login'
+  name:'Login',
+  data() {
+    return{
+      user: '',
+      pass: ''
+    }
+  },
+  methods:{
+      login(){
+        const formulario = document.getElementById('FrmLogin')
+        axios.post('http://localhost/app_inventario/api/Login.php', new FormData(formulario))
+        .then( res => {
+          if(res.data == 'success'){
+            console.log(res.data)
+            this.$router.push('Home')
+          }else{
+            console.log(res.data)
+
+            alert("No se encuentra usuario")
+          }
+        })
+      }
+  }
 }
 </script>
 

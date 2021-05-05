@@ -23,7 +23,7 @@
     .nav{
         box-sizing: border-box;
         height: 60px;
-        max-width: 100vw;
+        width: 100vw;
         background-color: cornflowerblue;
         color: #3b2f2e;
         font-family: sans-serif;
